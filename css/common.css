@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+body {
+  color: rgb(17, 24, 39);
+}
+body.dark {
+  background-color: rgb(17, 24, 39);
+  color: rgb(255, 255, 255);
+}
+.logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: baseline;
+}
+.logo span {
+  line-height: 2rem;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+a {
+  color: inherit;
+  text-decoration-line: none;
+}

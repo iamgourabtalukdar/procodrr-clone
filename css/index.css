@@ -20,6 +20,17 @@ header nav {
   margin-right: 2rem;
 }
 
+.dark #moon-icon {
+  display: none;
+}
+#sun-icon {
+  display: none;
+}
+
+.dark #sun-icon {
+  display: inline-block;
+}
+
 .title-sub-title-container {
   padding: 2rem 1rem;
 }

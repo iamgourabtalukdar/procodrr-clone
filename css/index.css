@@ -1,6 +1,15 @@
 body {
   margin: 0;
-  min-height: 110vh;
+  background-color: var(--bg-color);
+}
+
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: var(--bg-header);
+  backdrop-filter: blur(12px);
+  z-index: 9;
 }
 header .container {
   padding: 1rem;
@@ -30,7 +39,7 @@ section h1.title {
 section .sub-title {
   font-size: 1.25rem;
   line-height: 1.75rem;
-  color: rgb(107, 114, 128);
+  color: var(--text-gray);
   font-weight: 300;
   margin-top: 0;
 }
@@ -41,13 +50,17 @@ section .sub-title {
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
+
 .course-card {
-  /* border: 1px solid black; */
   box-shadow: 0 0 #0000, 0 0 #0000, 0 20px 25px -5px rgb(0, 0, 0, 0.1),
     0 8px 10px -6px rgb(0, 0, 0, 0.1);
   border-radius: 0.5rem;
   overflow: hidden;
+  background-color: var(--card-bg);
   border: 1px solid transparent;
+}
+.dark .course-card:nth-child(2) {
+  box-shadow: 0 0 40px 15px rgba(59, 130, 246, 0.2);
 }
 .course-card:hover {
   border: 1px solid rgb(var(--base-color));
@@ -55,6 +68,7 @@ section .sub-title {
 .course-card.large {
   transform: scale(1.05);
 }
+
 .course-card img {
   width: 100%;
   cursor: pointer;
@@ -63,7 +77,7 @@ section .sub-title {
   padding-inline: 1.5rem;
 }
 .course-card .description {
-  color: rgb(107, 114, 128);
+  color: var(--text-gray);
   font-size: 1.125rem;
   line-height: 1.75rem;
   font-weight: 300;
@@ -78,7 +92,7 @@ section .sub-title {
 .price .original-price {
   font-size: 1.5rem;
   line-height: 2rem;
-  color: rgb(107, 114, 128);
+  color: var(--text-gray);
   opacity: 0.6;
   font-weight: 700;
   margin-right: 0.5rem;
@@ -127,6 +141,30 @@ section .sub-title {
 
 /* course card style end  */
 
+/* footer start  */
+footer {
+  margin-block: 4rem 2rem;
+}
+footer small {
+  color: var(--text-gray);
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+footer .social-icons {
+  display: flex;
+  gap: 1.25rem;
+}
+.social-icons a {
+  color: var(--text-gray);
+  transition: color 0.1s ease-in-out;
+}
+
+.social-icons a:hover {
+  color: var(--text-color);
+}
+/* footer end  */
+
 @media (max-width: 1024px) {
   .course-card-container {
     grid-template-columns: repeat(2, 1fr);
@@ -164,6 +202,17 @@ section .sub-title {
   }
   .course-card-container {
     grid-template-columns: repeat(1, 1fr);
+  }
+  footer {
+    margin-block: 1.5rem;
+  }
+  footer .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  footer small {
+    order: 3;
   }
 }
 
